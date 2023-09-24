@@ -7,8 +7,8 @@
 
 # It is guaranteed that every call to ping uses a strictly larger value of t than the previous call.
 
-class RecentCounter:
 
+class RecentCounter:
     def __init__(self):
         self.requests = list()
 
@@ -17,6 +17,7 @@ class RecentCounter:
         while self.requests[0] < t - 3000:
             self.requests.pop(0)
         return len(self.requests)
+
 
 # Your RecentCounter object will be instantiated and called as such:
 # obj = RecentCounter()

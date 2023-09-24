@@ -8,6 +8,7 @@
 
 from re import search, sub
 
+
 class Solution:
     def decodeString(self, s: str) -> str:
         def replace(match):
@@ -15,6 +16,6 @@ class Solution:
             content = match.group(2)
             return content * count
 
-        while search(r'\d|\[|\]', s):
-            s = sub(r'(\d+)\[([a-z]+)\]', replace, s)
+        while search(r"\d|\[|\]", s):
+            s = sub(r"(\d+)\[([a-z]+)\]", replace, s)
         return s

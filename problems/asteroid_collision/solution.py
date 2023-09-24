@@ -4,12 +4,13 @@
 
 # Find out the state of the asteroids after all collisions. If two asteroids meet, the smaller one will explode. If both are the same size, both will explode. Two asteroids moving in the same direction will never meet.
 
+
 class Solution:
     def asteroidCollision(self, asteroids: List[int]) -> List[int]:
         stack = list()
         for asteroid in asteroids:
             stack.append(asteroid)
-            while (len(stack) > 1):
+            while len(stack) > 1:
                 y = stack.pop()
                 x = stack.pop()
                 if x < 0 and y > 0 or x * y > 0:

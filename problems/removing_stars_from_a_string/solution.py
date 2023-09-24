@@ -11,6 +11,7 @@
 # The input will be generated such that the operation is always possible.
 # It can be shown that the resulting string will always be unique.
 
+
 class Solution:
     def removeStars(self, s: str) -> str:
         stack = list()

@@ -8,6 +8,7 @@
 
 # Given two strings, word1 and word2, return true if word1 and word2 are close, and false otherwise.
 
+
 class Solution:
     def countOccurences(self, string: str) -> dict:
         occurences = {}
@@ -25,6 +26,8 @@ class Solution:
         #     return True
         occ1 = self.countOccurences(word1)
         occ2 = self.countOccurences(word2)
-        if sorted(occ1.values()) == sorted(occ2.values()) and sorted(occ1.keys()) == sorted(occ2.keys()):
+        if sorted(occ1.values()) == sorted(occ2.values()) and sorted(
+            occ1.keys()
+        ) == sorted(occ2.keys()):
             return True
         return False

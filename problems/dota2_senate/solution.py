@@ -13,6 +13,7 @@
 
 from re import sub
 
+
 class Solution:
     def predictPartyVictory(self, senate: str) -> str:
         # r = [i for i in range(len(senate)) if senate[i] == 'R']
@@ -31,7 +32,6 @@ class Solution:
         #         r.pop(0)
         #     next_ind += 1
 
-
         # senate = [i for i in senate]
         # while 'R' in senate and 'D' in senate:
         #     if senate[0] == 'R':
@@ -45,13 +45,12 @@ class Solution:
         # else:
         #     return 'Radiant'
 
-
-        while 'R' in senate and 'D' in senate:
-            if senate[0] == 'R':
-                senate = sub('D', '', senate[1:], count = 1) + 'R'
-            elif senate[0] == 'D':
-                senate = sub('R', '', senate[1:], count = 1) + 'D'
-        if 'R' not in senate:
-            return 'Dire'
+        while "R" in senate and "D" in senate:
+            if senate[0] == "R":
+                senate = sub("D", "", senate[1:], count=1) + "R"
+            elif senate[0] == "D":
+                senate = sub("R", "", senate[1:], count=1) + "D"
+        if "R" not in senate:
+            return "Dire"
         else:
-            return 'Radiant'
+            return "Radiant"

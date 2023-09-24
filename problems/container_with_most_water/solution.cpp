@@ -6,7 +6,8 @@ public:
             maxArea = max(maxArea, min(height[l], height[r]) * (r - l));
             if (height[l] < height[r]) {
                 l++;
-            } else {
+            }
+            else {
                 r--;
             }
         }

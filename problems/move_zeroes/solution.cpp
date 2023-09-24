@@ -5,7 +5,8 @@ public:
         while (i < nums.size() && j < nums.size()) {
             if (nums[j] == 0) {
                 j++;
-            } else {
+            }
+            else {
                 swap(nums[i++], nums[j++]);
             }
         }

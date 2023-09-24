@@ -8,9 +8,11 @@ public:
                 count++;
                 i++;
                 j--;
-            } else if (nums[i] + nums[j] < k) {
+            }
+            else if (nums[i] + nums[j] < k) {
                 i++;
-            } else {
+            }
+            else {
                 j--;
             }
         }
